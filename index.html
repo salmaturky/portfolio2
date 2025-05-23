@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Simple Portfolio</title>
+    <link rel="stylesheet"href ="style.css">
+    <style>
+        /* Custom styles for the Inter font */
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+    <header id="main-header" class="bg-gradient-to-r from-blue-600 to-purple-600 text-white p-6 shadow-lg rounded-b-lg">
+        <nav class="container mx-auto flex justify-between items-center flex-wrap">
+            <ul class="flex space-x-6">
+                <li><a href="#about" class="hover:text-blue-200 transition duration-300 ease-in-out rounded-md p-2">About Me</a></li>
+                <li><a href="#projects" class="hover:text-blue-200 transition duration-300 ease-in-out rounded-md p-2">Projects</a></li>
+                <li><a href="#contact" class="hover:text-blue-200 transition duration-300 ease-in-out rounded-md p-2">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="text-center mt-8">
+            <h1 class="text-5xl font-extrabold mb-2">Salma Turky - Web Developer</h1>
+            <p class="text-xl font-light">A passionate web developer creating awesome things.</p>
+        </div>
+    </header>
+
+    <main class="container mx-auto p-6 mt-8">
+        <section id="about" class="bg-white p-8 mb-8 rounded-lg shadow-md">
+            <h2 class="text-4xl font-bold mb-6 text-blue-700">About Me</h2>
+            <p class="text-lg leading-relaxed mb-4">Hello! I'm Salma Turky, an aspiring web developer with a keen interest in creating user-friendly and visually appealing websites. I'm currently learning HTML, CSS, and JavaScript.</p>
+            <p class="text-lg leading-relaxed">I enjoy problem-solving and bringing ideas to life on the web.</p>
+        </section>
+
+        <section id="projects" class="bg-white p-8 mb-8 rounded-lg shadow-md">
+            <h2 class="text-4xl font-bold mb-6 text-blue-700">My Projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="project-card bg-gray-50 p-6 rounded-lg shadow-sm border border-gray-200 hover:shadow-lg transition duration-300 ease-in-out">
+                    <h3 class="text-2xl font-semibold mb-3 text-purple-700">Project 1: Simple Landing Page</h3>
+                    <p class="text-md leading-relaxed mb-4">A basic responsive landing page built with HTML and CSS.</p>
+                    <a href="#" target="_blank" class="inline-block bg-blue-500 text-white px-5 py-2 rounded-md hover:bg-blue-600 transition duration-300 ease-in-out shadow-md">View Project</a>
+                </div>
+                <div class="project-card bg-gray-50 p-6 rounded-lg shadow-sm border border-gray-200 hover:shadow-lg transition duration-300 ease-in-out">
+                    <h3 class="text-2xl font-semibold mb-3 text-purple-700">Project 2: JavaScript Counter</h3>
+                    <p class="text-md leading-relaxed mb-4">A simple counter application using HTML, CSS, and JavaScript.</p>
+                    <a href="#" target="_blank" class="inline-block bg-blue-500 text-white px-5 py-2 rounded-md hover:bg-blue-600 transition duration-300 ease-in-out shadow-md">View Project</a>
+                </div>
+                <div class="project-card bg-gray-50 p-6 rounded-lg shadow-sm border border-gray-200 hover:shadow-lg transition duration-300 ease-in-out">
+                    <h3 class="text-2xl font-semibold mb-3 text-purple-700">Project 3: To-Do List App</h3>
+                    <p class="text-md leading-relaxed mb-4">A simple To-Do list application to manage daily tasks.</p>
+                    <a href="#" target="_blank" class="inline-block bg-blue-500 text-white px-5 py-2 rounded-md hover:bg-blue-600 transition duration-300 ease-in-out shadow-md">View Project</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="bg-white p-8 rounded-lg shadow-md">
+            <h2 class="text-4xl font-bold mb-6 text-blue-700">Get in Touch</h2>
+            <p class="text-lg leading-relaxed mb-6">Feel free to reach out if you have any questions or just want to connect!</p>
+            <ul class="space-y-3">
+                <li>Email: <a href="https://slmytrky214@gmail.com" class="text-blue-500 hover:underline">My Email</a></li>
+                <li>LinkedIn: <a href="https://www.linkedin.com/in/salma-turky-155aa2355?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BZXrTPAk1R%2BmFLFvlf5A4IA%3D%3D" target="_blank" class="text-blue-500 hover:underline">My LinkedIn Profile</a></li>
+                <li>GitHub: <a href="https://github.com/salmaturky" target="_blank" class="text-blue-500 hover:underline">My GitHub Profile</a></li>
+            </ul>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 text-white text-center p-6 mt-8 rounded-t-lg">
+        <p>&copy; <span id="current-year"></span> Salma Turky. All rights reserved.</p>
+    </footer>
+<script src="script.js"></script>
+    
+</body>
+</html>
