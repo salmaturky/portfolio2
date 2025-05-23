@@ -15,7 +15,7 @@ document.querySelectorAll('nav a').forEach(anchor => {
     });
 });
 
-const header = document.getElementById('main-header');
+const header = document.querySelector('header');
 const scrollThreshold = 50;
 
 window.addEventListener('scroll', () => {
