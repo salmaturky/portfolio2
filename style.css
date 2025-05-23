@@ -1,175 +1,183 @@
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: Arial, sans-serif;
     margin: 0;
-    padding: 0;
     line-height: 1.6;
-    background-color: #f0f2f5;
     color: #333;
+    background-color: #f4f4f4;
 }
 
+/* Adjusting header styles to match .hero concept */
 header {
-    background-color: #34495e;
+    background: #007bff;
     color: #fff;
-    padding: 1rem 0;
+    padding: 100px 0; /* Simulates .hero padding */
     text-align: center;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    transition: background-color 0.3s ease, box-shadow 0.3s ease, padding 0.3s ease;
 }
 
 header h1 {
-    margin-bottom: 0.5rem;
-    font-size: 2.5rem;
-}
-
-header p {
-    font-size: 1.1rem;
-    opacity: 0.9;
-}
-
-nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    background-color: #2c3e50;
-    padding: 0.7rem 0;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-}
-
-nav ul li {
-    margin: 0 20px;
-}
-
-nav ul li a {
-    color: #ecf0f1;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 1.1rem;
-    transition: color 0.3s ease;
-}
-
-nav ul li a:hover {
-    color: #3498db;
-}
-
-header.scrolled {
-    background-color: #2c3e50;
-    box-shadow: 0 3px 8px rgba(0,0,0,0.3);
-    padding: 0.7rem 0;
-}
-
-main {
-    padding: 20px;
-    max-width: 960px;
-    margin: 20px auto;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-}
-
-section {
-    padding: 30px 0;
-    border-bottom: 1px solid #eee;
-}
-
-section:last-of-type {
-    border-bottom: none;
-}
-
-h2 {
-    color: #2980b9;
-    text-align: center;
-    margin-bottom: 2rem;
-    font-size: 2rem;
-    position: relative;
-    padding-bottom: 10px;
-}
-
-h2::after {
-    content: '';
-    position: absolute;
-    left: 50%;
-    bottom: 0;
-    transform: translateX(-50%);
-    width: 60px;
-    height: 3px;
-    background-color: #3498db;
-    border-radius: 5px;
-}
-
-.project-card {
-    background-color: #ffffff;
-    border: 1px solid #e0e0e0;
-    padding: 20px;
-    margin-bottom: 20px;
-    border-radius: 8px;
-    text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.project-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-}
-
-.project-card h3 {
-    color: #34495e;
-    margin-top: 0;
-    font-size: 1.5rem;
-}
-
-.project-card p {
-    font-size: 1rem;
-    color: #555;
+    font-size: 3em;
     margin-bottom: 15px;
 }
 
-.project-card a {
+header p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+/* Navigation links within the header */
+header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex; /* To keep links in a row */
+    justify-content: center; /* Center the navigation links */
+    gap: 20px; /* Space between links */
+    margin-bottom: 30px; /* Space between nav and heading */
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+
+/* Main section styles - similar to .container */
+main {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+/* Section styles - acts as a general content block */
+main section {
+    padding: 60px 0;
+    text-align: center;
+    background-color: #fff;
+    margin-bottom: 20px; /* Space between sections */
+    border-radius: 8px; /* Added for visual appeal */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Added for visual appeal */
+}
+
+main section h2 {
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    color: #007bff;
+}
+
+/* Projects section grid (replaces .feature-grid) */
+#projects > div { /* Targets the div directly under #projects */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    text-align: left; /* Align text within project cards */
+}
+
+/* Individual project cards (replaces .feature-item) */
+#projects > div > div { /* Targets the divs within the projects grid */
+    background: #f9f9f9;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+#projects > div > div h3 {
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+/* View Project Button (replaces .btn) */
+#projects a {
     display: inline-block;
-    background-color: #3498db;
+    background: #28a745;
     color: #fff;
     padding: 10px 20px;
     text-decoration: none;
     border-radius: 5px;
-    margin-top: 10px;
-    transition: background-color 0.3s ease, transform 0.2s ease;
+    transition: background-color 0.3s ease;
+    margin-top: 15px; /* Space above the button */
 }
 
-.project-card a:hover {
-    background-color: #2980b9;
-    transform: scale(1.05);
+#projects a:hover {
+    background: #218838;
+}
+
+/* Contact section styles */
+#contact {
+    text-align: left; /* Adjust contact section alignment */
 }
 
 #contact ul {
     list-style: none;
     padding: 0;
-    text-align: center;
+    margin: 0;
 }
 
 #contact ul li {
-    margin-bottom: 12px;
-    font-size: 1.1rem;
+    margin-bottom: 10px;
 }
 
 #contact ul li a {
-    color: #3498db;
+    color: #007bff;
     text-decoration: none;
-    transition: color 0.3s ease;
 }
 
 #contact ul li a:hover {
-    color: #2980b9;
     text-decoration: underline;
 }
 
+
+/* Footer styles */
 footer {
+    background: #333;
+    color: #fff;
     text-align: center;
-    padding: 1.5rem 0;
-    background-color: #2c3e50;
-    color: #ecf0f1;
-    font-size: 0.95rem;
-    margin-top: 30px;
+    padding: 20px 0;
+    font-size: 0.9em;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2.5em;
+    }
+
+    header p {
+        font-size: 1em;
+    }
+
+    main section h2 {
+        font-size: 2em;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 60px 0;
+    }
+
+    header h1 {
+        font-size: 2em;
+    }
+
+    header p {
+        font-size: 0.9em;
+    }
+
+    /* Adjust button padding for smaller screens if needed */
+    #projects a {
+        padding: 8px 15px;
+        font-size: 0.9em;
+    }
+
+    main section h2 {
+        font-size: 1.8em;
+    }
 }
